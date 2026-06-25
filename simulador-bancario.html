@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Java | Gestión Bancaria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #000;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="text-zinc-100 p-4 sm:p-8 min-h-screen flex flex-col justify-between">
+
+    <header class="max-w-4xl w-full mx-auto flex justify-between items-center py-4 border-b border-white/5">
+        <a href="index.html"
+            class="text-xs tracking-widest text-zinc-500 hover:text-white transition-colors font-mono">← VOLVER AL
+            PORTFOLIO</a>
+        <span class="text-xs font-mono text-zinc-500">MÓDULO: PROGRAMACIÓN_BANCARIA</span>
+    </header>
+
+    <main class="max-w-4xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-8 items-start">
+
+        <div class="md:col-span-1 bg-zinc-950 border border-white/5 p-6 rounded-2xl space-y-4">
+            <h2 class="text-sm font-semibold tracking-wide text-white uppercase font-mono text-zinc-400">// Métodos POO
+            </h2>
+            <div class="space-y-2 flex flex-col">
+                <button onclick="ingresar(500)"
+                    class="w-full text-left bg-zinc-900 hover:bg-zinc-800 text-xs px-4 py-3 rounded-xl border border-white/5 transition-all duration-300 font-mono text-zinc-300 hover:border-white/10">
+                    Ingresar: 500.00
+                </button>
+                <button onclick="retirar(200)"
+                    class="w-full text-left bg-zinc-900 hover:bg-zinc-800 text-xs px-4 py-3 rounded-xl border border-white/5 transition-all duration-300 font-mono text-zinc-300 hover:border-white/10">
+                    Retirar 200.00
+                </button>
+                <button onclick="forzarExcepcion()"
+                    class="w-full text-left bg-zinc-900/50 hover:bg-red-950/30 text-xs px-4 py-3 rounded-xl border border-red-900/20 hover:border-red-500/30 text-red-400 transition-all duration-300 font-mono">
+                    Retirar 9999.00
+                </button>
+            </div>
+            <div class="pt-4 border-t border-white/5">
+                <p class="text-xs text-zinc-500 font-mono">Estado del Objeto:</p>
+                <p class="text-sm font-mono mt-1 text-zinc-300">Balance: <span id="balance-txt"
+                        class="text-white font-medium">1250.00</span>€</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bg-zinc-950 border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
+            <div class="bg-zinc-900 px-4 py-3 border-b border-white/5 flex items-center justify-between">
+                <div class="flex space-x-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-800"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-800"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-800"></div>
+                </div>
+                <span class="text-[10px] font-mono text-zinc-500">Java Virtual Machine Console</span>
+            </div>
+            <div id="terminal"
+                class="p-6 h-80 overflow-y-auto font-mono text-xs space-y-2 scrollbar-thin text-zinc-400">
+                <p class="text-zinc-600">[JVM] Inicializando entorno de ejecución local...</p>
+                <p class="text-zinc-600">[JVM] Instanciando clase CuentaBancaria con saldo inicial de 1250.00€.</p>
+                <p class="text-emerald-400">> Sistema listo para recibir peticiones.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="max-w-4xl w-full mx-auto text-center text-[10px] font-mono text-zinc-600 py-4 border-t border-white/5">
+        Diseño Lógico Orientado a Objetos — Refactorizado mediante IA.
+    </footer>
+
+    <script>
+        let saldo = 1250.00;
+        const terminal = document.getElementById('terminal');
+        const balanceTxt = document.getElementById('balance-txt');
+
+        function logToTerminal(message, type = 'info') {
+            const p = document.createElement('p');
+            const time = new Date().toLocaleTimeString();
+            p.className = type === 'error' ? 'text-red-400 font-medium' : type === 'success' ? 'text-emerald-400' : 'text-zinc-300';
+            p.innerHTML = `<span class="text-zinc-600">[${time}]</span> ${message}`;
+            terminal.appendChild(p);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function ingresar(cantidad) {
+            saldo += cantidad;
+            balanceTxt.innerText = saldo.toFixed(2);
+            logToTerminal(`Transacción completada: depósito de +${cantidad}.00€ verificado.`, 'success');
+        }
+
+        function retirar(cantidad) {
+            saldo -= cantidad;
+            balanceTxt.innerText = saldo.toFixed(2);
+            logToTerminal(`Transacción completada: retiro de -${cantidad}.00€ autorizado.`, 'info');
+        }
+
+        function forzarExcepcion() {
+            logToTerminal(`Exception in thread "main" com.dam.banca.SaldoInsuficienteException: Intento de retirar 9999.00€ superando el límite de crédito disponible.`, 'error');
+            logToTerminal(`&nbsp;&nbsp;&nbsp;&nbsp;at com.dam.banca.CuentaBancaria.retirar(CuentaBancaria.java:42)`, 'error');
+        }
+    </script>
+</body>
+
+</html>

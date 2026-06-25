@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Adrian Santos | Portfolio Developer & IA">
+    <meta property="og:description"
+        content="Estudiante de DAM enfocado en optimizar el desarrollo de software mediante el uso avanzado y estratégico de Inteligencia Artificial.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#000000">
+    <title>Adrian Santos | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent': '#00DF81',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-zinc-100 selection:bg-accent selection:text-black antialiased">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#home"
+                class="text-[11px] sm:text-sm font-medium tracking-widest uppercase hover:text-accent transition-colors font-mono whitespace-nowrap">
+                // Adrian Santos Camiña
+            </a>
+            <div
+                class="flex items-center space-x-3 sm:space-x-6 md:space-x-8 text-xs sm:text-sm tracking-wide text-zinc-400">
+                <a href="#about" class="nav-link hover:text-white py-2">Sobre mí</a>
+                <a href="#projects" class="nav-link hover:text-white py-2">Proyectos</a>
+                <a href="#skills" class="nav-link hover:text-white py-2">Tecnologías</a>
+                <a href="#contact"
+                    class="nav-link text-white border border-white/10 hover:border-accent hover:bg-accent hover:text-black px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full transition-all duration-500 font-mono text-[10px] sm:text-xs whitespace-nowrap">//
+                    contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20">
+        <div class="max-w-3xl text-center space-y-6 sm:space-y-8">
+            <h1
+                class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight leading-tight sm:leading-none text-white">
+                Diseño código limpio <br>
+                <span class="text-accent font-normal">Potenciado por IA</span>
+            </h1>
+            <p class="text-zinc-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+                Estudiante de DAM enfocado en optimizar el desarrollo de software mediante el uso avanzado y estratégico
+                de Inteligencia Artificial.
+            </p>
+            <div class="pt-2">
+                <a href="#projects"
+                    class="inline-flex items-center text-xs sm:text-sm font-medium border-b border-white hover:text-accent hover:border-accent transition-all duration-300 pb-1 font-mono">
+                    Ver laboratorios ↓
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 sm:py-32 px-4 sm:px-6 border-t border-white/5 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div class="md:col-span-1">
+                <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold md:sticky md:top-28">01 / Perfil
+                    Professional</h2>
+            </div>
+            <div class="md:col-span-2 space-y-6 text-zinc-400 text-base sm:text-lg font-light leading-relaxed">
+                <p>
+                    Actualmente he finalizado mi primer año en <strong class="text-white font-medium">DAM</strong>,
+                    construyendo una base sólida en lógica, programación orientada a objetos y bases de datos, sin
+                    embargo, mi verdadero factor diferencial radica en mi pasión por la <strong
+                        class="text-accent font-medium">Inteligencia Artificial</strong> y su aplicación práctica en el
+                    desarrollo.
+                </p>
+                <p>
+                    No me limito a escribir código de forma tradicional; me especializo en entender, co-programar y
+                    dominar los flujos de trabajo guiados por IA, mi objetivo es alcanzar la máxima eficiencia
+                    tecnológica, utilizando los modelos más avanzados para auditar, optimizar y acelerar la creación de
+                    soluciones de software robustas.
+                </p>
+                <p>
+                    Creo firmemente que el futuro del desarrollo pertenece a quienes sepan orquestar la IA con precisión
+                    matemática, mi enfoque está en la excelencia de uso de estas tecnologías para entregar productos
+                    limpios, rápidos y minimalistas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 sm:py-32 px-4 sm:px-6 border-t border-white/5 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 sm:mb-16">
+            <div class="md:col-span-1">
+                <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold md:sticky md:top-28">02 /
+                    Laboratorios y Código</h2>
+            </div>
+            <div class="md:col-span-2">
+                <p class="text-zinc-400 text-base sm:text-lg font-light">
+                    Una selección de módulos de lógica, estructuras de datos y proyectos desarrollados durante mi
+                    formación técnica.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+
+            <a href="simulador-bancario.html"
+                class="project-card group bg-zinc-900/20 border border-white/5 p-6 sm:p-8 rounded-2xl hover:border-accent/20 hover:bg-zinc-900/40 cursor-pointer relative overflow-hidden block">
+                <div class="flex justify-between items-start mb-6">
+                    <span
+                        class="text-[10px] sm:text-xs text-zinc-500 tracking-wider font-mono group-hover:text-accent transition-colors duration-300">JAVA
+                        / OOP</span>
+                    <span
+                        class="text-zinc-600 group-hover:text-accent transition-colors text-xl transform group-hover:translate-x-1 duration-300">→</span>
+                </div>
+                <h3
+                    class="text-lg sm:text-xl font-medium text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                    Simulador de Sistemas de Gestión Bancaria</h3>
+                <p class="text-zinc-400 font-light text-xs sm:text-sm leading-relaxed">
+                    Desarrollo de un núcleo lógico orientado a objetos para la gestión de transacciones bancarias,
+                    control de excepciones personalizadas y persistencia simulada de datos.
+                </p>
+            </a>
+
+            <a href="gestion-bbdd.html"
+                class="project-card group bg-zinc-900/20 border border-white/5 p-6 sm:p-8 rounded-2xl hover:border-accent/20 hover:bg-zinc-900/40 cursor-pointer relative overflow-hidden block">
+                <div class="flex justify-between items-start mb-6">
+                    <span
+                        class="text-[10px] sm:text-xs text-zinc-500 tracking-wider font-mono group-hover:text-accent transition-colors duration-300">SQL
+                        / RELATIONAL</span>
+                    <span
+                        class="text-zinc-600 group-hover:text-accent transition-colors text-xl transform group-hover:translate-x-1 duration-300">→</span>
+                </div>
+                <h3
+                    class="text-lg sm:text-xl font-medium text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                    Optimización y Modelado de Bases de Datos</h3>
+                <p class="text-zinc-400 font-light text-xs sm:text-sm leading-relaxed">
+                    Diseño, normalización y optimización de consultas complejas (Triggers, Funciones y Vistas) aplicadas
+                    a un entorno corporativo simulado.
+                </p>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 sm:py-32 px-4 sm:px-6 border-t border-white/5 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div class="md:col-span-1">
+                <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold md:sticky md:top-28">03 / Stack
+                    Tecnológico</h2>
+            </div>
+            <div class="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-y-8 gap-x-4">
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        Java</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Lógica / POO</p>
+                </div>
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        SQL (MySQL / Oracle)</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Bases de Datos</p>
+                </div>
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        HTML5 / CSS3</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Maquetación Web</p>
+                </div>
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        JavaScript</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Interactividad</p>
+                </div>
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        XML</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Estructuración</p>
+                </div>
+
+                <div class="group cursor-default">
+                    <h4
+                        class="text-sm font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                        AI Prompting & Audit</h4>
+                    <p class="text-xs text-zinc-500 font-mono">Cursor / Gemini / Refactor</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact"
+        class="py-20 sm:py-32 px-4 sm:px-6 border-t border-white/5 max-w-5xl mx-auto text-center space-y-12">
+        <div class="space-y-4">
+            <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold font-mono">04 / ¿Hablamos?</h2>
+            <p class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight max-w-xl mx-auto text-white">
+                Si quieres colaborar o conocer más sobre mi stack, hablemos.
+            </p>
+        </div>
+
+        <div class="max-w-xl mx-auto pt-4 space-y-8 w-full">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 w-full">
+                <a href="mailto:adrixtylepro@gmail.com"
+                    class="social-btn border border-white/10 text-zinc-300 hover:text-white text-xs sm:text-sm px-6 py-3 rounded-full font-medium inline-flex items-center justify-center w-full sm:w-auto text-center transition-all duration-300 font-mono">
+                    <span>adrixtylepro@gmail.com</span>
+                </a>
+
+                <a href="https://github.com/AdrixTyLe-coder" target="_blank"
+                    class="social-btn border border-white/10 text-zinc-300 hover:text-white text-xs sm:text-sm px-6 py-3 rounded-full font-medium inline-flex items-center justify-center w-full sm:w-auto font-mono transition-all duration-300">
+                    <span>// github</span>
+                </a>
+
+                <a href="https://www.instagram.com/adriiansantos__/" target="_blank"
+                    class="social-btn border border-white/10 text-zinc-300 hover:text-white text-xs sm:text-sm px-6 py-3 rounded-full font-medium inline-flex items-center justify-center w-full sm:w-auto font-mono transition-all duration-300">
+                    <span>// instagram</span>
+                </a>
+            </div>
+
+            <div class="flex justify-center w-full pt-2">
+                <a href="cv-adrian.pdf" target="_blank"
+                    class="social-btn bg-white text-black text-xs sm:text-sm px-8 py-3 rounded-full font-medium inline-flex items-center justify-center w-full sm:w-auto text-center transition-all duration-300 shadow-sm">
+                    <span>Descargar CV (PDF)</span>
+                </a>
+            </div>
+        </div>
+
+        <footer class="pt-16 sm:pt-24 text-xs text-zinc-600 font-mono">
+            &copy; 2026 — Hecho con precisión y minimalismo.
+        </footer>
+    </section>
+
+</body>
+
+</html>
